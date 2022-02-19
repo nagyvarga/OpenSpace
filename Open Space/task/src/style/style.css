@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url("../style/fonts/Quicksand-Bold.ttf");
+    font-weight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.space {
+
+    background-image: url("../img/space.png");
+    background-repeat: repeat;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    width: 80vw;
+    align-items: self-end;
+    overflow: hidden;
+}
+
+.planet-area {
+    align-items: end;
+    display: flex;
+    height: 80vh;
+    justify-content: left;
+    width: 40vw;
+}
+
+.planet {
+    bottom: -10px;
+    left: -10px;
+    max-width: 35vw;
+    position: relative;
+}
+
+.rocket {
+    bottom: 288px;
+    left: -210px;
+    max-width: 10vw;
+    position: relative;
+    transform: rotateZ(25deg);
+}
+
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 40px;
+    align-self: start;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(48,46,72,1) 0%, rgba(130,77,34,1) 35%, rgba(127,0,255,1) 100%);
+}
+
+.control-panel__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 20vw;
+    background: rgba(50,50,50,.9);
+    background-blend-mode: multiply;
+    padding: 70px;
+    border-radius: 5px;
+}
+
+.control-panel__inner div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="button"],
+input[type="password"] {
+    padding: 12px 40px;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 3px;
+    background: rgba(100,100,255,.15);
+    color: rgba(100,100,255,.8);
+    transition: all .4s;
+}
+
+input[type="password"] {
+    width: 50%;
+    padding: 12px;
+}
+
+input[type="button"]:hover {
+    background: rgba(100,100,255,.25);
+    color: rgba(100,100,255,1);
+    cursor: pointer;
+}
+
+.check-buttons,
+.levers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.levers input {
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 10px;
+}
+
+input[disabled] {
+    background: rgba(255,255,255,.05);
+    color: rgba(255,255,255,.8);
+}
+
+input[disabled]:hover {
+    background: rgba(255,255,255,.05);
+    color: rgba(255,255,255,.8);
+    cursor: default;
+}
